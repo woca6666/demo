@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+
+#people:
+#  name: zhangsan
+#  age: 18
+#  boss: true
+#  brith: 2020/08/09
+#  maps: {k1: v1,k2: 12}
+#  lists: [a,b,c,13]
+#  dog:
+#    name: liuliu
+#    age: 2
