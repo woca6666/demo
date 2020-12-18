@@ -1,0 +1,58 @@
+server:
+  port: 8081
+
+#spring:
+#  datasource:
+#    druid:
+#      url: jdbc:mysql://192.168.1.165:3306/frame?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Shanghai&useSSL=false
+#      username: admin
+#      password: 123456
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      #配置初始化大小、最小、最大
+#      initial-size: 2
+#      min-idle: 2
+#      max-active: 30
+#      #配置获取连接等待超时的时间
+#      max-wait: 10000
+#      #打开PSCache，并且指定每个连接上PSCache的大小
+#      #如果用Oracle，则把poolPreparedStatements配置为true，mysql可以配置为false。分库分表较多的数据库，建议配置为false
+#      pool-prepared-statements: false
+#      time-between-eviction-runs-millis: 60000
+#      test-while-idle: true
+#      test-on-borrow: true
+#      max-open-prepared-statements: 20
+#      validation-query: select 1
+
+
+
+
+#基本静态过滤规则
+#jsets:
+#  shiro:
+#    #    jcaptcha-enable: true
+#    login-url: /login
+#    login-success-url: /index
+#    filte-rules:
+#    - /swagger-ui.html,/webjars/**,/v2/**,/swagger-resources/**,/temp/**-->anon
+#    - /login/**-->authc
+#    - /logout/**-->logout
+#    - /**-->user
+
+#security:
+#  basic:
+#    enabled: true
+#    path: /swagger-ui.html
+#  user:
+#    name: test
+#    password: 123456
+
+#mybatis-plus 配置
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: UUID
+  mapper-locations: classpath:mapper/*.xml #映射地址
+  type-aliases-package: com.example.demo.pojo #实体包
+spring:
+  profiles:
+    include: jdbc
