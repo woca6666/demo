@@ -29,7 +29,7 @@ class DemoApplicationTests {
     @Autowired
     MockMvc mockMvc;
 
-    @Test
+    @Test//security
     void iocTest(){
         boolean b = ioc.containsBean("getPeople");
         System.out.print(b);
